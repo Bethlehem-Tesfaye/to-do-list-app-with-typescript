@@ -106,13 +106,14 @@ ul{
     padding: 8px;
     border-radius: 10px;  
 }
-.text p{font-size: 20px;}
-.text input{width: 20px;}
-.text{
-    display: flex;
-    justify-content: center;
-    gap: 5px;
+.div2 input{
+   margin-right: 10px;  
+  align-items: center; 
+  justify-content: center;
 }
+.div2{
+    display: flex;
+} 
 .icons img{
     width:25px;
     height: 25px;

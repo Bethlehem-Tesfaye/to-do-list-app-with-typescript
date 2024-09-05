@@ -123,6 +123,27 @@ ul{
     text-decoration: line-through;
     color: var(--progress-color);
 }
+
+.divDate { 
+    position: absolute;
+    background-color: #1f1c1f;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 5px 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+    white-space: nowrap;
+    z-index: 10;
+    transition: 0.7s ease-in-out;
+    transform: translate(25px, -15px);
+    opacity: 0;
+}
+
+li:hover .divDate{
+    display: block;
+    opacity: 1; 
+}
 @media (max-width:380px) {
     .details{
         padding: 20px;

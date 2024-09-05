@@ -49,6 +49,16 @@ const addTask = function () {
         const label = document.createElement("label");
         const checkBox = document.createElement("input");
         checkBox.setAttribute("type", "checkbox");
+        const formattedDate = new Date(task.createdAt).toLocaleDateString("en-US", {
+            weekday: "short",
+            year: "numeric",
+            month: "short",
+            day: "2-digit"
+        });
+        const divDate = document.createElement("div");
+        divDate.setAttribute("class", "divDate");
+        divDate.append(formattedDate);
+        console.log(task.createdAt.toString());
         if (checkBox.checked) {
             label.setAttribute("class", "completed");
             saveTask();
@@ -69,7 +79,7 @@ const addTask = function () {
         editImg.addEventListener("click", () => edit(index));
         iconDiv.append(editImg, deleteImg);
         div.append(div2, iconDiv);
-        taskList.append(div);
+        taskList.append(divDate, div);
         list === null || list === void 0 ? void 0 : list.append(taskList);
         checkBox.checked = task.completed;
         checkBox.addEventListener("change", () => {
